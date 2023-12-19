@@ -5,14 +5,14 @@
   &::before {
     content: "";
     position: absolute;
-    background: url("/images/bg-pattern-footer-desktop.svg");
+    background: url("../images/bg-pattern-footer-desktop.svg");
     background-repeat: no-repeat;
     width: 33.25rem;
     height: 100%;
     left: 0;
     top: 0;
     @include breakpoints(small) {
-      background: url("/images/bg-pattern-footer-mobile.svg");
+      background: url("../images/bg-pattern-footer-mobile.svg");
       background-repeat: no-repeat;
       width: 23.25rem;
       height: 21%;
