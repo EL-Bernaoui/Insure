@@ -21,7 +21,7 @@ header {
         z-index: -1;
         width: 100%;
         height: calc(100vh - 5rem);
-        right: -100%;
+        left: -100%;
         top: 5rem;
         flex-direction: column;
         text-align: center;
@@ -33,7 +33,7 @@ header {
         background-size: contain;
         transition: 0.3s ease-in-out;
         &.active {
-          right: 0;
+          left: 0;
         }
       }
       li {
