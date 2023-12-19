@@ -1,0 +1,45 @@
+// Start Services
+.services {
+  padding-top: 15.625rem;
+  padding-bottom: 3.75rem;
+  .head {
+    margin-bottom: 4rem;
+    @include breakpoints(medium) {
+      text-align: center;
+    }
+    span {
+      display: block;
+      width: 9.375rem;
+      height: 0.0625rem;
+      margin-bottom: 2.75rem;
+      background-color: $dark_violet;
+      @include breakpoints(medium) {
+        margin: 0 auto 2.75rem;
+      }
+    }
+    h2 {
+      font-family: $heading_font;
+      font-size: 3.75rem;
+      @include breakpoints(custom) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .box {
+    @include breakpoints(medium) {
+      text-align: center;
+    }
+    img {
+      width: 3.75rem;
+    }
+    h3 {
+      font-family: $heading_font;
+      margin: 1.5625rem 0 0.9375rem;
+      font-size: 1.5rem;
+    }
+    p {
+      color: $Grayish_blue;
+      font-size: 0.9375rem;
+    }
+  }
+}

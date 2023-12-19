@@ -1,0 +1,79 @@
+header {
+  position: relative;
+  background-color: #fff;
+  height: 5rem;
+  z-index: 999;
+  .container {
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .hamburger_icon {
+      display: none;
+      @include breakpoints(medium) {
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .nav {
+      @include breakpoints(medium) {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: calc(100vh - 5rem);
+        right: -100%;
+        top: 5rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        background: url("/images/bg-pattern-mobile-nav.svg");
+        background-color: $very_dark_violet;
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        background-size: contain;
+        transition: 0.3s ease-in-out;
+        &.active {
+          right: 0;
+        }
+      }
+      li {
+        a {
+          display: block;
+          padding: 0.5rem 1.25rem;
+          font-weight: bold;
+          margin: 0 0.3125rem;
+          color: $Grayish_blue;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $dark_violet;
+          }
+          @include breakpoints(medium) {
+            color: #fff;
+            width: fit-content;
+            margin: 0.625rem auto;
+            padding: 0.5rem 3rem;
+            &:hover {
+              color: $Grayish_blue;
+            }
+          }
+        }
+        &:last-child a {
+          border: 0.125rem solid $dark_violet;
+          color: $dark_violet;
+          &:hover {
+            background-color: $dark_violet;
+            color: #fff;
+          }
+          @include breakpoints(medium) {
+            border-color: #fff;
+            color: #fff;
+            &:hover {
+              background-color: #fff;
+              color: $dark_violet;
+            }
+          }
+        }
+      }
+    }
+  }
+}

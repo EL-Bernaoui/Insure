@@ -1,0 +1,47 @@
+// Start About
+.about {
+  position: relative;
+  margin: 3.75rem 0;
+  background-color: $dark_violet;
+  height: 40vh;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("/images/bg-pattern-how-we-work-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 26.875rem;
+    height: 100%;
+    right: 0;
+    top: 0;
+    @include breakpoints(large) {
+      background: url("/images/bg-pattern-how-we-work-mobile.svg");
+      background-repeat: no-repeat;
+      width: 10.625rem;
+      height: 100%;
+      right: 0;
+    }
+  }
+  .about_heading {
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+    font-family: $heading_font;
+    @include breakpoints(large) {
+      font-size: 2.5rem;
+      line-height: 2.8125rem;
+      text-align: center;
+    }
+  }
+  .about_btn {
+    color: #fff;
+    border-color: #fff;
+    padding: 0.625rem 3.125rem;
+    z-index: 10;
+    border-width: 0.125rem;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $dark_violet;
+      background-color: #fff;
+    }
+  }
+}

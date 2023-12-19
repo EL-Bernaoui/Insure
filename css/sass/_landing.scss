@@ -1,0 +1,94 @@
+// start landing page
+.landing {
+  background-color: $dark_violet;
+  color: #fff;
+  height: calc(100vh - 4.375rem);
+  @include breakpoints(large) {
+    height: 100%;
+    padding-bottom: 3.125rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../images/bg-pattern-intro-left-desktop.svg");
+    left: 0;
+    bottom: -30.625rem;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 12.5rem;
+    @include breakpoints(small) {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../../images/bg-pattern-intro-right-desktop.svg");
+    right: 0px;
+    top: -5rem;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 26.875rem;
+  }
+  .container {
+    .box_1 {
+      position: relative;
+      z-index: 10;
+      @include breakpoints(large) {
+        margin-top: 10rem;
+        text-align: center;
+      }
+      @include breakpoints(small) {
+        margin-top: 4.5rem;
+        text-align: center;
+      }
+      span {
+        width: 9.375rem;
+        height: 0.0625rem;
+        margin-bottom: 3.75rem;
+        @include breakpoints(large) {
+          display: none !important;
+        }
+      }
+      h1 {
+        font-family: $heading_font;
+        font-size: 4.375rem;
+        line-height: 4.6875rem;
+        @include breakpoints(medium) {
+          font-size: 3.4375rem;
+          line-height: 4.0625rem;
+        }
+        @include breakpoints(custom) {
+          font-size: 2.5rem;
+          line-height: 3.125rem;
+        }
+      }
+      .btn_cta {
+        color: #fff;
+        border-color: #fff;
+        border-radius: 0;
+        padding: 0.5rem 1.25rem;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: $dark_violet;
+          background-color: #fff;
+        }
+      }
+    }
+    .box_2 {
+      .landing_image {
+        @include breakpoints(small) {
+          position: relative;
+          z-index: 15;
+        }
+        img {
+          transform: translateY(6.25rem);
+          @include breakpoints(small) {
+            transform: translate(-0.75rem, 0);
+            min-width: calc(100% + 1.5rem);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.footer {
+  background-color: $very_light_gray;
+  margin-top: 8.125rem;
+  padding: 2.5rem 0 2rem;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("/images/bg-pattern-footer-desktop.svg");
+    background-repeat: no-repeat;
+    width: 33.25rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+    @include breakpoints(small) {
+      background: url("/images/bg-pattern-footer-mobile.svg");
+      background-repeat: no-repeat;
+      width: 23.25rem;
+      height: 21%;
+      left: 0;
+      top: 0;
+    }
+  }
+  .logo_social {
+    border-bottom: 0.0625rem solid $dark_grayish_violet;
+    @include breakpoints(custom) {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    .footer_logo {
+      width: 6.25rem;
+    }
+    .box {
+      .social_icon {
+        width: 1.25rem;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .navs {
+    h4 {
+      color: $dark_grayish_violet;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.125rem;
+    }
+    ul {
+      padding: 0;
+      margin: 1.25rem 0 0;
+      li {
+        a {
+          display: block;
+          color: $very_dark_violet;
+          font-size: 0.8125rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: 0.3s ease-in-out;
+          padding: 0.3125rem 0;
+          width: fit-content;
+          @include breakpoints(small) {
+            margin: auto;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
