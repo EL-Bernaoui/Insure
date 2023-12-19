@@ -319,7 +319,7 @@ header .container .nav li:last-child a:hover {
 }
 @media (max-width: 576px) {
   .footer::before {
-    background: url("/images/bg-pattern-footer-mobile.svg");
+    background: url("../images/bg-pattern-footer-mobile.svg");
     background-repeat: no-repeat;
     width: 23.25rem;
     height: 21%;
